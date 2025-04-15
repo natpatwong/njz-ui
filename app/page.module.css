@@ -11,7 +11,7 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
+  padding: 20px;
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
@@ -165,4 +165,31 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+.navbar {
+  width: 100%;
+  justify-content: over;
+  padding: 0.5rem 2rem;
+}
+
+.navLogo img {
+  border-radius: 150%;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  color: #171717;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLinks li a:hover {
+  color: #532D9D;
 }
