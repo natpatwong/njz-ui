@@ -6,6 +6,7 @@ import {SpotifyEmbed, Supernaturl} from "/components/Spotify";
 
 export default function Home() {
   return (
+    
     <div className={styles.page}>
       
       {/*  NavBar */}

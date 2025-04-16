@@ -1,68 +1,74 @@
+'use client';
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "./members.module.css"; 
-import Link from 'next/link';
+import styles from "./members.module.css";
+import Link from "next/link";
 
+export default function MembersPage() {
+  const [members, setMembers] = useState([]);
 
-export default function Members() {
+  useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        const res = await fetch("/api/infomembers", { cache: "no-store" });
+        const data = await res.json();
+        setMembers(data);
+      } catch (error) {
+        console.error("Failed to fetch members:", error);
+      }
+    };
+
+    fetchMembers();
+  }, []);
+
   return (
     <div className={styles.container}>
       
-
-       {/*  NavBar */}
-       <nav className={styles.navbar}>
-        <div className={styles.navLogo}>
-        </div>
+      {/* NavBar */}
+      <nav className={styles.navbar}>
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/members">Members</Link></li> 
+          <li><Link href="/members">Members</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
-      </nav> 
+      </nav>
 
-      {/* Section: Minji */}
-      <section className={`${styles.section} ${styles.blue}`}>
-        <div className={styles.member}>
-          <Image src="/members/minji.png" alt="Minji" width={200} height={200} />
-          <h2>Minji</h2>
-          <p>민지 - Leader, vocalist, dancer. Cool and graceful.</p>
-        </div>
-      </section>
-
-      {/* Section: Hanni */}
-      <section className={`${styles.section} ${styles.pink}`}>
-        <div className={styles.member}>
-          <Image src="/members/hanni.png" alt="Hanni" width={200} height={200} />
-          <h2>Hanni</h2>
-          <p>하니 - Energetic and expressive. Vocalist and performer!</p>
-        </div>
-      </section>
-
-      {/* Section: Danielle */}
-      <section className={`${styles.section} ${styles.yellow}`}>
-        <div className={styles.member}>
-          <Image src="/members/danielle.png" alt="Danielle" width={200} height={200} />
-          <h2>Danielle</h2>
-          <p>다니엘 - Bright and bubbly! Dual nationality charm~</p>
-        </div>
-      </section>
-
-      {/* Section: Hyein*/}
-      <section className={`${styles.section} ${styles.lavender}`}>
-        <div className={styles.member}>
-          <Image src="/members/danielle.png" alt="Danielle" width={200} height={200} />
-          <h2>Danielle</h2>
-          <p>다니엘 - Bright and bubbly! Dual nationality charm~</p>
-        </div>
-      </section>
-
-      {/* Section: Herin */}
-      <section className={`${styles.section} ${styles.green}`}>
-        <div className={styles.member}>
-          <Image src="/members/danielle.png" alt="Danielle" width={200} height={200} />
-          <h2>Hearin</h2>
-          <p>다니엘 - Bright and bubbly! Dual nationality charm~</p>
-        </div>
-      </section>
+      {/* Members List */}
+      {members.map((member) => (
+        <section
+          key={member.id}
+          className={`${styles.section} ${getColorClass(member.color)}`}
+        >
+          <div className={styles.member}>
+            <Image
+              src={member.img}
+              alt={member.name}
+              width={300}
+              height={300}
+            />
+            <h2>{member.name}</h2>
+            <p>{member.role}</p>
+          </div>
+        </section>
+      ))}
     </div>
   );
+}
+
+function getColorClass(color) {
+  switch (color) {
+    case "#f71ec8":
+      return styles.pink;
+    case "#2377D5":
+      return styles.blue;
+    case "#FFE81B":
+      return styles.yellow;
+    case "#B375F3":
+      return styles.lavender;
+    case "#00C12D":
+      return styles.green;
+    default:
+      return "";
+  }
 }
