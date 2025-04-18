@@ -1,17 +1,10 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-rows: 0px 1fr 20px;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 20px;
+  padding: 50px;
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
@@ -163,13 +156,12 @@ a.secondary {
 
 @media (prefers-color-scheme: dark) {
   .logo {
-    filter: invert();
   }
 }
 .navbar {
   width: 100%;
   justify-content: over;
-  padding: 0.5rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .navLogo img {
@@ -188,8 +180,22 @@ a.secondary {
   color: #171717;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .navLinks li a:hover {
   color: #532D9D;
+}
+
+/* รูปอัลบั้ม */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 230px; /* ช่องว่างระหว่างรูป */
+  margin-bottom: 1px; /* เว้นระหว่างแถว */
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(32, 28, 28, 0.1);
 }

@@ -3,13 +3,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 220px 60px;
+  padding: 200px 60px;
   text-align: center;
   position: relative;
   z-index: 1;
   border-bottom-left-radius: 70% 10%;
   border-bottom-right-radius: 40% 20%;
+  transition: background 0.5s ease;
 }
+
 
 .section::after {
   content: '';
@@ -30,21 +32,21 @@
 }
 
 .pink {
-  background: linear-gradient(to bottom, #f71ec8, #DF00AD);
+  background: linear-gradient(to bottom, #f71ec8, #e0a7d4);
 }
 
 .blue {
-  background: linear-gradient(to bottom, #2377D5, #2377D5);
+  background: linear-gradient(to bottom, #2377D5, #b1d0f3);
 }
 
 .yellow {
-  background: linear-gradient(to bottom, #FFE81B, #FFE81B);
+  background: linear-gradient(to bottom, #FFE81B, #ebe7c6);
 }
 .lavender{
-  background: linear-gradient(to bottom,#B375F3,#B375F3);
+  background: linear-gradient(to bottom,#B375F3,#e8e6e9);
 }
 .green{
-  background: linear-gradient(to bottom,#00C12D,#00C12D);
+  background: linear-gradient(to bottom,#00C12D,#bfd8c5);
 }
 
   /* NAVBAR */
@@ -70,9 +72,51 @@
   color: #171717;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
+
 }
 
 .navLinks li a:hover {
   color: #532D9D;
 }
 
+/* ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 24px rgba(5, 5, 5, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Hover effect */
+.member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Text inside member */
+.member h2 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+  color: #fff;
+}
+
+.member p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
