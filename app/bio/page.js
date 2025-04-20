@@ -20,7 +20,7 @@ export default function BioPage() {
         <div className={styles.textBox}>
           <h1 className={styles.bioTitle}>About NewJeans</h1>
           <p className={styles.bioIntro}>
-            “Hello, we are NewJeans! (안녕하세요, 뉴진스입니다!)”
+          &quot;Hello, we are NewJeans! (안녕하세요, 뉴진스입니다!) &quot;
           </p>
         </div>
       </div>
