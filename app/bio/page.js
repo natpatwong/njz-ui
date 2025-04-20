@@ -45,7 +45,6 @@ export default function BioPage() {
 </div>
 
 
-{/* ✅ บล็อกข้อความใหม่ */}
 <div className={styles.infoContainer}>
   <section className={styles.infoBlock}>
     <h2>About the Group</h2>
