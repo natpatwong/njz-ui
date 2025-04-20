@@ -49,7 +49,7 @@
   background: linear-gradient(to bottom,#00C12D,#bfd8c5);
 }
 
-  /* NAVBAR */
+
 .navbar {
   width: 100%;
   justify-content: over;
@@ -78,9 +78,10 @@
 
 .navLinks li a:hover {
   color: #532D9D;
+  animation: hoverEffect 0.3s ease-in-out forwards;
 }
 
-/* ANIMATION */
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -103,20 +104,94 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Hover effect */
+
 .member:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 
-/* Text inside member */
+
 .member h2 {
   font-size: 2rem;
   margin: 1rem 0 0.5rem;
-  color: #fff;
+  color: #141414;
 }
 
 .member p {
   font-size: 1.2rem;
   color: #f0f0f0;
 }
+
+.memberInfoOverlay {
+  font-family: 'cooper black', sans-serif; 
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@keyframes bounceUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swayLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.member {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 24px rgba(5, 5, 5, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards, swayLeftRight 4s ease-in-out infinite; /* เพิ่มการส่ายซ้ายขวาช้า ๆ */
+}
+
+.member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.infoBlock, .infoBlock2 {
+  animation: popIn 0.6s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

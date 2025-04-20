@@ -16,6 +16,7 @@ export default function Home() {
         backgroundRepeat: 'no-repeat',
         backgroundPositionY:'top',
         minHeight: '100vh',
+        
       }}
     >
       {/*  NavBar */}
@@ -28,10 +29,13 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* 🔷 Main Content */}
+      {/* อักษรลอย*/}
       <main className={styles.main}>
         <Newjeans />
 
+
+
+{/* //ข้างบน */}
         <div className={styles.row}>
           <Image className={styles.image} src="/picnjz/actention.jpg" width={400} height={400} alt="image1" 
           style={{ boxShadow: '0 4px 50px rgba(0, 0, 0, 0.3)',
@@ -51,7 +55,9 @@ export default function Home() {
           <OMG />
           <DITTO />
         </div>
-
+             
+             
+              {/* ข้างล่าง */}
         <div className={styles.row}>
           <Image className={styles.image} src="/picnjz/sweet.jpg" width={400} height={400} alt="image4"
           style={{ boxShadow: '0 4px 50px rgba(0, 0, 0, 0.3)',

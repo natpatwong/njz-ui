@@ -51,14 +51,16 @@ export default function MembersPage() {
 
   return (
     <div className={styles.container}>
-      {/* NavBar */}
+      {/*  NavBar */}
       <nav className={styles.navbar}>
+        <div className={styles.navLogo}></div>
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
           <li><Link href="/bio">Bio</Link></li>
           <li><Link href="/members">Members</Link></li>
         </ul>
       </nav>
+    
 
       {/* Members List */}
       {members.map((member) => (
@@ -83,6 +85,10 @@ export default function MembersPage() {
                 <div className={styles.memberInfoOverlay} style={{margin: '10px'}}> {/*ระยะห่างจากขอบข้างบน*/}
                   <p className={styles.memberNameOverlay}style={{color: 'black'}}>{selectedMember.role}</p>   
                   <p className={styles.memberRoleOverlay}style={{color:'black'}}>{selectedMember.decribtion}</p>
+                  <p className={styles.memberRoleOverlay}style={{color:'black'}}>{selectedMember.Birthday}</p>
+                  <p className={styles.memberRoleOverlay}style={{color:'black'}}>{selectedMember.Height}</p>
+
+
                 </div>
               )}
             </div>

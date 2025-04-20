@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Sarina';
+    src: url('/fonts/Sarina-Regular.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 50px;
+    gap: 64px;
+    font-family: var(--font-geist-sans);
+    background-color: #f0f8ff;
+    background-image: url('/images/background-BBLE.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 10s linear infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li a {
+    color: #171717;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navLinks li a:hover {
+    color: #532D9D;
+    animation: hoverEffect 0.3s ease-in-out forwards;
+}
+
+@keyframes hoverEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.bioTitle {
+    font-size: 150px;
+    font-weight: bold;
+    font-family: 'Sarina', serif;
+    color: #db6448;
+    margin-bottom: 10px;
+    animation: titleAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes titleAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.bioIntro {
+    font-size: 20px;
+    font-family: 'Sriracha', cursive;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.infoBlock {
+    padding: 30px;
+    max-width: 800px;
+    background-color: #131816;
+    border-left: 6px solid #868585;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.8;
+    color: #fcfcfc;
+    align-self: flex-start; /* Align to the left */
+    margin: 60px 0; /* Adjust margin as needed */
+}
+
+/* Parent container to hold both blocks */
+.infoContainer {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Add space between the blocks */
+    gap: 20px; /* Optional: Adds some space between the blocks */
+    flex-wrap: wrap; /* Allows wrapping if the screen size is smaller */
+}
+
+.infoBlock, .infoBlock2 {
+    padding: 30px;
+    max-width: 800px;
+    background-color: #131816;
+    border-left: 6px solid #868585;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.8;
+    color: #fcfcfc;
+    flex: 1; /* Ensure they take equal space */
+    margin: 0; /* Remove individual margins */
+}
+
+.infoBlock2 {
+    text-align: left; /* Center text for infoBlock2 */
+}
+
+/* Optional: Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .infoContainer {
+        flex-direction: column; /* Stack them vertically on small screens */
+    }
+}
+
+.infoBlock, .infoBlock2 {
+    /* ... (ของเดิม) ... */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .infoBlock:hover, .infoBlock2:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 30px rgba(255, 255, 255, 0.1);
+    border-left-color: #b6e4ff; /* เปลี่ยนสีขอบให้ดูมุ้งมิ้ง */
+  }
+
+  .infoBlock, .infoBlock2 {
+    animation: popIn 0.6s ease-out;
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .image {
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 50px rgba(56, 56, 56, 0.3);
+    display: block;
+  }
+  
+  .hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .imageWrapper:hover .hoverImage {
+    opacity: 1;
+  }
+  
+  .imageWrapper:hover .image:not(.hoverImage) {
+    opacity: 0;
+  }
+  
+
+  
