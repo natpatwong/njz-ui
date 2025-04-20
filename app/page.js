@@ -26,6 +26,7 @@ export default function Home() {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/bio">Bio</Link></li>
           <li><Link href="/members">Members</Link></li>
+          <p>just a FAN blog, have a nice day -Zen & Jublek</p>
         </ul>
       </nav>
 
@@ -76,6 +77,9 @@ export default function Home() {
           <GOD />
           <Super />
         </div>
+        {/* <div><p>About</p></div> */}
+        {/* ชนากานต์ ผิวจันทร์ 6608247
+        ณัฐภัสสร ดอกนาค 6605191 */}
       </main>
     </div>
   );
