@@ -109,8 +109,8 @@ export default function Chatbox({ username, photoURL }) {
                 </div>
               );
             })}
-            <div ref={messagesEndRef} />
-          </div>
+                    <div ref={messagesEndRef} />
+                    </div>
 
           <div style={styles.inputContainer}>
             <input
