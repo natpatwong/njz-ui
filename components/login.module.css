@@ -1,0 +1,111 @@
+/* components/login.module.css */
+.loginContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(224, 234, 234, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(9, 8, 8, 0.1);
+  }
+  
+  .inputGroup {
+    margin-bottom: 1rem;
+    
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .signInButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f9db8e;
+    color: rgb(25, 12, 12);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signInButton:hover {
+    background-color: #213622;
+  }
+  
+  .separator {
+    margin: 1.5rem 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .separator::before {
+    left: 0;
+  }
+  
+  .separator::after {
+    right: 0;
+  }
+  
+  .googleButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(226, 123, 123);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .googleButton:hover {
+    background-color: #6a4c4c;
+  }
+  
+  .googleButton img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .link {
+    color: #2196f3;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    background-color: #d6cbcd;
+    color: #d32f2f;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }

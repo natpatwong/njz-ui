@@ -28,7 +28,7 @@ export default function BioPage() {
       <div className={styles.imageWrapper}>
   <Image
     className={styles.image}
-    src="/picnjz/eieione.jpg" // รูปปกติ
+    src="/picnjz/eieione.jpg" 
     width={510}
     height={350}
     alt="image1"
@@ -36,7 +36,7 @@ export default function BioPage() {
   />
   <Image
     className={`${styles.image} ${styles.hoverImage}`}
-    src="/picnjz/eieitwo.jpg" // รูปตอน hover
+    src="/picnjz/eieitwo.jpg" 
     width={510}
     height={350}
     alt="image1-hover"

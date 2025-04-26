@@ -172,7 +172,7 @@
   box-shadow: 0 8px 24px rgba(5, 5, 5, 0.15);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.8s ease forwards, swayLeftRight 4s ease-in-out infinite; /* เพิ่มการส่ายซ้ายขวาช้า ๆ */
+  animation: fadeInUp 0.8s ease forwards, swayLeftRight 4s ease-in-out infinite; 
 }
 
 .member:hover {
@@ -193,20 +193,5 @@
     opacity: 1;
     transform: scale(1);
   }
-}
-
-/* ----------------375px--------------- */
-.navbar {
-  padding: 1rem;
-}
-
-.navLinks {
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.navLinks li a {
-  font-size: 1rem;
 }
 

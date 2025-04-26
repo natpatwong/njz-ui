@@ -29,7 +29,7 @@
     }
 }
 
-/* NAVBAR */
+
 .navbar {
     width: 100%;
     justify-content: center;
@@ -106,16 +106,16 @@
     font-family: 'Kanit', sans-serif;
     line-height: 1.8;
     color: #fcfcfc;
-    align-self: flex-start; /* Align to the left */
-    margin: 60px 0; /* Adjust margin as needed */
+    align-self: flex-start; 
+    margin: 60px 0; 
 }
 
-/* Parent container to hold both blocks */
+
 .infoContainer {
-    display: flex; /* Use flexbox to align items side by side */
-    justify-content: space-between; /* Add space between the blocks */
-    gap: 20px; /* Optional: Adds some space between the blocks */
-    flex-wrap: wrap; /* Allows wrapping if the screen size is smaller */
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .infoBlock, .infoBlock2 {
@@ -129,23 +129,23 @@
     font-family: 'Kanit', sans-serif;
     line-height: 1.8;
     color: #fcfcfc;
-    flex: 1; /* Ensure they take equal space */
-    margin: 0; /* Remove individual margins */
+    flex: 1; 
+    margin: 0; 
 }
 
 .infoBlock2 {
-    text-align: left; /* Center text for infoBlock2 */
+    text-align: left; 
 }
 
-/* Optional: Adjustments for responsiveness */
+
 @media (max-width: 768px) {
     .infoContainer {
-        flex-direction: column; /* Stack them vertically on small screens */
+        flex-direction: column; 
     }
 }
 
 .infoBlock, .infoBlock2 {
-    /* ... (ของเดิม) ... */
+   
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
@@ -153,7 +153,7 @@
   .infoBlock:hover, .infoBlock2:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 6px 30px rgba(255, 255, 255, 0.1);
-    border-left-color: #b6e4ff; /* เปลี่ยนสีขอบให้ดูมุ้งมิ้ง */
+    border-left-color: #b6e4ff; 
   }
 
   .infoBlock, .infoBlock2 {
