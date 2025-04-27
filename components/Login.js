@@ -50,11 +50,11 @@ const Login = ({ onLoginSuccess }) => {
 
   return (
     <div className={styles.loginContainer}>
-      <h2>Sign In</h2>
+      {/* <h2>Sign In</h2> */}
       {error && <div className={styles.error}>{error}</div>}
       
       <form onSubmit={handleSubmit}>
-        <div className={styles.inputGroup}>
+        {/* <div className={styles.inputGroup}>
           <input
             type="text"
             value={username}
@@ -62,9 +62,9 @@ const Login = ({ onLoginSuccess }) => {
             placeholder="Username"
             required
           />
-        </div>
+        </div> */}
         
-        <div className={styles.inputGroup}>
+        {/* <div className={styles.inputGroup}>
           <input
             type="password"
             value={password}
@@ -72,9 +72,9 @@ const Login = ({ onLoginSuccess }) => {
             placeholder="Password"
             required
           />
-        </div>
+        </div> */}
         
-        <div className={styles.actions}>
+        {/* <div className={styles.actions}>
           <button 
             type="submit" 
             className={styles.signInButton}
@@ -82,10 +82,10 @@ const Login = ({ onLoginSuccess }) => {
           >
             {loading ? 'กำลังเข้าสู่ระบบ...' : 'Sign In'}
           </button>
-        </div>
+        </div> */}
       </form>
       
-      <div className={styles.separator}>หรือ</div>
+      {/* <div className={styles.separator}>หรือ</div> */}
       
       <div className={styles.googleLogin}>
         <button 
@@ -98,14 +98,14 @@ const Login = ({ onLoginSuccess }) => {
         </button>
       </div>
       
-      <div className={styles.links}>
+      {/* <div className={styles.links}>
         <Link href="/register">
           Create an Account?
         </Link>
         <Link href="/forgot-password">
           Forgot your Password?
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
